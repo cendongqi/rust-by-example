@@ -40,7 +40,7 @@ fn main() {
     let width: usize = 5;
     println!("{number:0<width$}");
 
-    // 指定小数位数，.语法 + 小数位长度
+    // 指定小数位数，点.语法 + 小数位长度
     let pi: f64 = 3.141592;
     println!("{pi:.decimals$}", decimals=3);
 }

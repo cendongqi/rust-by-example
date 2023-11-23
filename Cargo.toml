@@ -22,3 +22,9 @@ name = "formatted_print"
 
 [[example]]
 name = "debug"
+
+[[example]]
+name = "display"
+
+[[example]]
+name = "test_case_list"
