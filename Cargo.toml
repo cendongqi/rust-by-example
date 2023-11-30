@@ -28,3 +28,15 @@ name = "display"
 
 [[example]]
 name = "test_case_list"
+
+[[example]]
+name = "formatting"
+
+[[example]]
+name = "tuple"
+
+[[example]]
+name = "arrays_and_slices"
+
+[[example]]
+name = "structures"

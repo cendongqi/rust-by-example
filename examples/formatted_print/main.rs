@@ -25,7 +25,7 @@ fn main() {
     // 向左对齐，使用0填充
     println!("{number:0<5}", number=1);
 
-    // 通过指定参数指定宽度，并且要用$符号
+    // 通过指定参数指定宽度，并且末尾要用$符号
     println!("{number:0<width$}", number=1, width=10);
 
     // 实现fmt::Display的自定义类型才可以使用占位符{}，自定义类型默认不实现
