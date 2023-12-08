@@ -40,3 +40,18 @@ name = "arrays_and_slices"
 
 [[example]]
 name = "structures"
+
+[[example]]
+name = "enums"
+
+[[example]]
+name = "testcase_linked_list"
+
+[[example]]
+name = "constants"
+
+[[example]]
+name = "casting"
+
+[[example]]
+name = "literals"
