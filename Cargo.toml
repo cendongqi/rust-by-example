@@ -55,3 +55,12 @@ name = "casting"
 
 [[example]]
 name = "literals"
+
+[[example]]
+name = "from_and_into"
+
+[[example]]
+name = "try_from_and_try_into"
+
+[[example]]
+name = "to_and_from_strings"
