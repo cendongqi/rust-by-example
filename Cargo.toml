@@ -64,3 +64,15 @@ name = "try_from_and_try_into"
 
 [[example]]
 name = "to_and_from_strings"
+
+[[example]]
+name= "expressions"
+
+[[example]]
+name= "loop"
+
+[[example]]
+name= "for_and_range"
+
+[[example]]
+name= "match"
