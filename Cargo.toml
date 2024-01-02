@@ -82,3 +82,6 @@ name= "match_guards"
 
 [[example]]
 name= "match_binding"
+
+[[example]]
+name= "if_let"
