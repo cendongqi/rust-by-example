@@ -85,3 +85,9 @@ name= "match_binding"
 
 [[example]]
 name= "if_let"
+
+[[example]]
+name= "let_else"
+
+[[example]]
+name= "while_let"
