@@ -27,9 +27,39 @@ fn main() {
 
     if let Some(i) = emoticon {
         println!("Matched {:?}", i);
-    } else if i_like_letters { // 解构错误的时候会进入else if分支，比如i不是数字
+    } else if i_like_letters {
         println!("Didn't match a number.");
     } else { // 这里是i能解构但是匹配的是None
         println!("I don't like letters.")
     }
+
+    // if-let 作用于enum
+    enum Foo {
+        Bar,
+        Baz,
+        Qux(u32),
+    }
+
+    let a = Foo::Bar;
+    let b = Foo::Baz;
+    let c = Foo::Qux(100);
+
+    if let Foo::Bar = a { // if-let的匹配可以不需要PartialEq，而是以模式的形式进行匹配，不需要比较实例
+        println!("a is foobar");
+    }
+
+    if let Foo::Bar = b { // b不会匹配Foo::Bar，所以不会打印
+        println!("b is foobar");
+    }
+
+    // c会匹配，且c的值会绑定到value
+    if let Foo::Qux(value) = c {
+        println!("c is {}", value);
+    }
+
+    if let Foo::Qux(value @ 100) = c {
+        println!("c is one hundred");
+    }
+
+
 }
