@@ -91,3 +91,12 @@ name= "let_else"
 
 [[example]]
 name= "while_let"
+
+[[example]]
+name = "associated_functions_and_methods"
+
+[[example]]
+name = "closures"
+
+[[example]]
+name = "closure_capturing"
