@@ -18,7 +18,7 @@ fn main() {
     let closure_inferred = |i| i + outer_var ; // 推断
 
     println!("closure_annotated: {}", closure_annotated(1));
-    println!("closure_inferred: {}", closure_inferred(1));
+    println!("closure_inferred: {:?}", closure_inferred(1));
 
     // closure的类型自动推断后，不可以再annotation
     // println!("closure_inferred: {}", closure_inferred(42i64));
