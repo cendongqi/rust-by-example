@@ -4,6 +4,8 @@
 // T
 // 首选引用，需要的时候才会降级
 
+use std::mem;
+
 fn main() {
     let color = String::from("green");
 
@@ -27,6 +29,22 @@ fn main() {
     };
     inc(); // 使用可变引用调用closure
 
-    // let _reborrow = &count; // 编译错误，后面的代码又执行了
+    // let _reborrow = &count; // 编译错误，后面的代码又执行了可变引用，这里不能借用不可变引用
     inc();
+
+    let _count_reborrowed = &mut count; // 后面没有再执行count，可以重新借用了
+
+
+    let movable = Box::new(3);
+    /*
+        mem::drop需要的是T而不是&T，需要所有权转移，编译器推断这里需要做所有权转移
+        而原始的数字3属于拷贝类型，这样的T被closure捕获时，会发生Copy，不会转移，对副本进行mem::drop没有意义
+        所以这里要创建智能指针Box::new来防止拷贝行为
+     */
+    let consume = || {
+        println!("`movable`: {:?}", movable);
+        mem::drop(movable); // mem::drop的语义是拿到所有权之后丢弃
+    };
+
+    consume(); // 只能调用一次，因为movable释放了
 }
