@@ -100,3 +100,6 @@ name = "closures"
 
 [[example]]
 name = "closure_capturing"
+
+[[example]]
+name = "closure_parameters"
