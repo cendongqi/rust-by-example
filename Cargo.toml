@@ -109,3 +109,12 @@ name = "closure_parameters"
 
 [[example]]
 name = "closure_type_anonymity"
+
+[[example]]
+name = "closure_input_functions"
+
+[[example]]
+name = "closure_output_parameters"
+
+[[example]]
+name = "closure_example"
