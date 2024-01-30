@@ -118,3 +118,6 @@ name = "closure_output_parameters"
 
 [[example]]
 name = "closure_example"
+
+[[example]]
+name = "closure_searching"

@@ -14,6 +14,15 @@ fn main() {
     println!("First element of vec1 is: {}", vec1[0]);
 
     // into_iter()对vec2的元素进行了move，vec2不再可用
-    println!("First element of vec2 is: {}", vec2[0]);
-    println!("vec2 len: {}", vec2.len());
+    // println!("First element of vec2 is: {}", vec2[0]);
+    // println!("vec2 len: {}", vec2.len());
+
+    let array1 = [1, 2, 3];
+    let array2 = [4, 5, 6];
+
+    // 对数组的操作类似
+    // iter()解出&i32
+    // into_iter()解出i32
+    println!("Find 2 in array1: {:?}", array1.iter().any(|&x| x== 2));
+    println!("Find 2 in array2: {:?}", array2.into_iter().any(|x| x== 2));
 }
